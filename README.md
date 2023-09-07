@@ -1,4 +1,4 @@
-# Sprawozdanie metodyki DevOps Ada Różańska
+# Sprawozdanie metodyki DevOps Adrianna Różańska
 Niniejsze sprawozdanie przedstawia proces skonfigurowania procesu budowy, testowania i wdrożenia aplikacji opartej o konternery za pomocą oprogramowania Jenkins. Konfiguracja jest przechowywana w pliku `Jenkinsfile`. Definiowanie procesu budowy w repozytorium pozwala na zachowanie spójności i minimalizuje ryzyko problemów, gdy wiele osób używa tej samej instancji Jenkinsa 
 ### 1. Wykonanie forka repozytorium.
 Kliknięcie przycisku Fork w serwisie GitHUb w repozytorium źródłowym spowoduje utworzenie forka.
