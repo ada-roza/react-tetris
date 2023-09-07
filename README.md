@@ -24,6 +24,8 @@ CMD ["yarn","start"]
 
 ### 3. Dodanie Jenkinsfile
 Proces Jenkinsa dla tego projektu ma trzy fazy: `Build`, `Test` i `Deploy`. W fazie `Test` kolekcjonowane są wyniki testów z pliku `tests_coverage.txt`
+
+```groovy
 pipeline {
   agent any
   stages {
@@ -57,3 +59,4 @@ pipeline {
     }
   }
 }
+```
