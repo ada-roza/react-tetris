@@ -118,13 +118,21 @@ Jak widać budowa przechodzi i mamy dostępny raport testowania projektu:
 
 Diagram aktywności procesu budowy:
 
-| Nazwa kroku | Technologia | Linku do pliku konfigurującego | Linia | Komentarz |
+| Nazwa kroku | Technologia | Plik | Linia | Komentarz |
 |-------------|-------------|--------------------------------|----------|-----------|
 | fetch       | git         | Jenkinsfile                    | -        | pobranie kodu źródłowego z Githuba |
 | yarn build  | nodejs      | Jenkinsfile                    | 7        | uruchomienie procesu budowania projektu Nodejs |
-| archive     | jenkins     | Jenkinsfile                    | 25       | zachowanie pliku wynikowego z testów | 
 | yarn test   | nodejs      | Jenkinsfile oraz package.json  | 20       | uruchomienie testów jednostkowych |
-| docker-compose up | docker-compose | Jenkinsfile oraz docker-compose.yml | 34 | postawienie stosu aplikacyjnego docker-compose |
+| archive     | jenkins     | Jenkinsfile                    | 25       | zachowanie pliku wynikowego z testów | 
+| deploy | docker-compose | Jenkinsfile oraz docker-compose.yml | 34 | postawienie stosu aplikacyjnego docker-compose |
+| echo | jenkins | Jenkinsfile | 38 | wypisanie komunikatu | 
 
+Diagram wdrożeniowy (infrastruktura):
 
+| Nazwa artefaktu | Technologia | Plik | Linia | Komentarz |
+|-----------------|-------------|------|-------|-----------|
+| jenkins         | java        | Jenkinsfile | wszystkie | instancja Jenkinsa i proces budowy w środku |
+| repo            | github (ruby) | - | - | źródło kodu |
+| silnik dockera  | docker      | - | - | środowisko wykonawczne kontenerów |
+| kontener dockera | docker | Dockerfile | wszystkie |  definicja obrazu OCI |
 
