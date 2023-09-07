@@ -11,3 +11,13 @@ git clone https://github.com/ada-roza/react-tetris.git
 ```
 ![image](https://github.com/ada-roza/react-tetris/assets/123314121/6a4a4d34-fe59-4ed0-ad5d-cdc8ec7fff00)
 
+### 2. Dodanie Dockerfile
+Aby skonteneryzować aplikację należy utworzyć plik `Dockerfile` i zdefiniować kroki budowy obrazu [OCI](https://opencontainers.org/). Użycie `yarn` zamiast `npm` nieco przyśpiesza instalację zależności.
+```Dockerfile
+FROM node
+COPY package*.json .
+RUN yarn
+COPY . .
+EXPOSE 8080
+CMD ["yarn","start"]
+```
