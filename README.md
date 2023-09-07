@@ -100,5 +100,10 @@ Teraz możemy kliknąć "Uruchom" aby wystartować proces budowy
 ![image](https://github.com/ada-roza/react-tetris/assets/123314121/80013cd3-3d4b-4711-805d-84c0913c4584)
 
 
+Jak widać budowa przechodzi i mamy dostępny raport testowania projektu:
+
+![image](https://github.com/ada-roza/react-tetris/assets/123314121/e9dd1ec2-8402-43ac-b3ea-f5cc6c9457db)
+
+![image](https://github.com/ada-roza/react-tetris/assets/123314121/f0cbad03-2fcc-4a69-a128-6516dc91cbb9)
 
 
