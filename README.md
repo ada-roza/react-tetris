@@ -21,3 +21,39 @@ COPY . .
 EXPOSE 8080
 CMD ["yarn","start"]
 ```
+
+### 3. Dodanie Jenkinsfile
+Proces Jenkinsa dla tego projektu ma trzy fazy: `Build`, `Test` i `Deploy`. W fazie `Test` kolekcjonowane są wyniki testów z pliku `tests_coverage.txt`
+pipeline {
+  agent any
+  stages {
+    stage('Build') {
+      steps {
+        sh 'yarn'
+        sh 'yarn build'
+      }
+      post {
+        success {
+          echo 'Build is successful'
+        }
+        failure {
+          echo 'Build errored'
+        }
+      }
+    }
+    stage('Test') {
+      steps {
+        sh 'yarn test'
+      }
+      post {
+        success {
+          echo 'Tests: passing'
+          archiveArtifacts artifacts: 'tests_coverage.txt', followSymlinks: false
+        }
+        failure {
+          echo 'Tests: failing'
+        }
+      }
+    }
+  }
+}
