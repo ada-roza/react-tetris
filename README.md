@@ -111,3 +111,20 @@ Jak widać budowa przechodzi i mamy dostępny raport testowania projektu:
 - pipeline jest automatycznie wyzwalany - jest, za pomocą CRON co 15 minut
 - pipeline przechodzi wszystkie etapy (stage build-test-deploy) - tak, na zrzucie ekranu widać zielone statusy faz budowy
 - pipeline obsługuje powiadamianie o rezlutatach każdego z etapów - tak, za pomocą sekcji `post` w Jenkinsfile
+
+
+
+## Diagramy
+
+Diagram aktywności procesu budowy:
+
+| Nazwa kroku | Technologia | Linku do pliku konfigurującego | Linia | Komentarz |
+|-------------|-------------|--------------------------------|----------|-----------|
+| fetch       | git         | Jenkinsfile                    | -        | pobranie kodu źródłowego z Githuba |
+| yarn build  | nodejs      | Jenkinsfile                    | 7        | uruchomienie procesu budowania projektu Nodejs |
+| archive     | jenkins     | Jenkinsfile                    | 25       | zachowanie pliku wynikowego z testów | 
+| yarn test   | nodejs      | Jenkinsfile oraz package.json  | 20       | uruchomienie testów jednostkowych |
+| docker-compose up | docker-compose | Jenkinsfile oraz docker-compose.yml | 34 | postawienie stosu aplikacyjnego docker-compose |
+
+
+
