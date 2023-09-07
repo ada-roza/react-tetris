@@ -60,3 +60,24 @@ pipeline {
   }
 }
 ```
+
+### 4. Dodanie projektu do instancji Jenkinsa
+W głównym widoku Jenkinsa klikamy `Nowy projekt`
+
+![image](https://github.com/ada-roza/react-tetris/assets/123314121/c9a14d76-61e6-4bf6-bfaf-dc92bd2839c1)
+
+Jako typ wybieramy `Pipeline`
+
+![image](https://github.com/ada-roza/react-tetris/assets/123314121/df8d0229-c329-4608-a3a6-67e6993b00b6)
+
+W sekcji Pipeline ustawiamy by definicja procesu była zaciągania z SCM. Podajemy adres repozytorium, resztę ustawień zostawiająz bez zmian.
+
+![image](https://github.com/ada-roza/react-tetris/assets/123314121/c149b898-1b32-4efb-add2-b576f71f530b)
+
+Teraz możemy kliknąć "Uruchom" aby wystartować proces budowy
+
+![image](https://github.com/ada-roza/react-tetris/assets/123314121/80013cd3-3d4b-4711-805d-84c0913c4584)
+
+
+
+
