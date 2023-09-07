@@ -58,9 +58,6 @@ pipeline {
       }
     }
     stage('Deploy') {
-      when {
-        branch 'master'
-      }
       steps {
         sh 'docker-compose up -d'
       }
@@ -74,7 +71,6 @@ pipeline {
       }
     }
   }
-}
 }
 ```
 
