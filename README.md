@@ -106,4 +106,8 @@ Jak widać budowa przechodzi i mamy dostępny raport testowania projektu:
 
 ![image](https://github.com/ada-roza/react-tetris/assets/123314121/f0cbad03-2fcc-4a69-a128-6516dc91cbb9)
 
-
+## Wymagania
+- pipeline jest zdefniowany w Jenkinsfile w repo z grą - https://github.com/ada-roza/react-tetris/blob/master/Jenkinsfile
+- pipeline jest automatycznie wyzwalany - jest, za pomocą CRON co 15 minut
+- pipeline przechodzi wszystkie etapy (stage build-test-deploy) - tak, na zrzucie ekranu widać zielone statusy faz budowy
+- pipeline obsługuje powiadamianie o rezlutatach każdego z etapów - tak, za pomocą sekcji `post` w Jenkinsfile
