@@ -29,5 +29,21 @@ pipeline {
         }
       }
     }
+    stage('Deploy') {
+      when {
+        branch 'master'
+      }
+      steps {
+        sh 'docker-compose up -d'
+      }
+      post {
+        success {
+          echo 'Deployed!'
+        }
+        failure {
+          echo 'Deployment failed'
+        }
+      }
+    }
   }
 }
