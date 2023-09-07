@@ -70,9 +70,17 @@ Jako typ wybieramy `Pipeline`
 
 ![image](https://github.com/ada-roza/react-tetris/assets/123314121/df8d0229-c329-4608-a3a6-67e6993b00b6)
 
-W sekcji Pipeline ustawiamy by definicja procesu była zaciągania z SCM. Podajemy adres repozytorium, resztę ustawień zostawiająz bez zmian.
+W sekcji Pipeline ustawiamy by definicja procesu była zaciągania z SCM. Podajemy adres repozytorium.
 
 ![image](https://github.com/ada-roza/react-tetris/assets/123314121/c149b898-1b32-4efb-add2-b576f71f530b)
+
+Możemy też skonfigurować zadanie CRON, które będzie automatycznie wywoływać proces budowy. Jest to dobra praktyka, ponieważ serwer CI (ciągłej integracji) ma w założeniach zagwarantować jak największą spójność projektu w zespole. W firmach częstym wyborem jest budowa aplikacji co każdy commit lub każdej nocy o danej porze. My integrację będziemy przeprowadzać co 15 min.
+```
+H/15 * * * *
+```
+
+![image](https://github.com/ada-roza/react-tetris/assets/123314121/b6e5a2ab-1032-41b7-92f5-335247ae256f)
+
 
 Teraz możemy kliknąć "Uruchom" aby wystartować proces budowy
 
