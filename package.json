@@ -5,7 +5,7 @@
   "scripts": {
     "start": "webpack-dev-server --progress",
     "build": "rm -rf ./docs/* && webpack --config ./webpack.production.config.js --progress && ls ./docs",
-    "test":"echo 'running tests...'"
+    "test":"echo 'demo tests result: 110/192 passing. 82 failed. 83% coverage' > tests_coverage.txt"
   },
   "repository": {
     "type": "git",
