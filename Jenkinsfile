@@ -22,6 +22,7 @@ pipeline {
       post {
         success {
           echo 'Tests: passing'
+          archiveArtifacts artifacts: 'tests_coverage.txt', followSymlinks: false
         }
         failure {
           echo 'Tests: failing'
