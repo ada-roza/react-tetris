@@ -118,6 +118,8 @@ Jak widać budowa przechodzi i mamy dostępny raport testowania projektu:
 
 Diagram aktywności procesu budowy:
 
+![image](https://github.com/ada-roza/react-tetris/assets/123314121/cb8681cb-350e-4f11-b9d0-78126adf77e2)
+
 | Nazwa kroku | Technologia | Plik | Linia | Komentarz |
 |-------------|-------------|--------------------------------|----------|-----------|
 | fetch       | git         | Jenkinsfile                    | -        | pobranie kodu źródłowego z Githuba |
@@ -128,6 +130,8 @@ Diagram aktywności procesu budowy:
 | echo | jenkins | Jenkinsfile | 38 | wypisanie komunikatu | 
 
 Diagram wdrożeniowy (infrastruktura):
+
+![image](https://github.com/ada-roza/react-tetris/assets/123314121/eeaa95dc-7034-44d5-b8e5-9293b016136a)
 
 | Nazwa artefaktu | Technologia | Plik | Linia | Komentarz |
 |-----------------|-------------|------|-------|-----------|
